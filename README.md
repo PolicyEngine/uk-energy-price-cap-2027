@@ -16,7 +16,7 @@ Ofgem announces the cap for January to March 2027 on 25 November 2026 ([Ofgem's 
 4. Leaves out Northern Ireland, which the Ofgem cap does not cover. Households do not change their use.
 5. Reports, for Great Britain and by income decile (equivalised HBAI net income before housing costs, person-weighted): average bills before and after, the change, spending as a share of HBAI net income, households spending more than 10% of net income on energy, and four household examples computed from the published rates alone.
 
-`results/results.json` is the output behind the post's tables and charts. It holds weighted aggregates only: no record identifiers, weights or record counts. `check_floor.py` prints the number of survey households behind each published cell; the smallest (Great Britain households with zero or negative income) rests on 183 survey households, and each income decile on more than 1,700.
+`results/results.json` is the output behind the post's tables and charts. It holds weighted aggregates only: no record identifiers, weights or record counts. `check_floor.py` prints the number of survey households behind each published cell; the smallest (Great Britain households with zero income, as Households Below Average Income statistics reset negative incomes to zero) rests on 183 survey households, and each income decile on more than 1,700.
 
 ## Model and data
 
