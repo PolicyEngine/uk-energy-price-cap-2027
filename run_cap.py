@@ -46,7 +46,7 @@ SHA256 = "301d2fe5e7805c5a6242b37843cb118445aefd59a0593833362ab5a6e2f9ba90"
 YEAR = 2026
 DAYS = 365
 
-# ---- Cap inputs: swap Ofgem's January rates in here on 25 November. ----
+# ---- Cap inputs (Cornwall Insight forecast, 18 November 2026). ----
 TDCV = {"electricity": 2500, "gas": 9500}
 # Ofgem, GB average Direct Debit, 1 October to 31 December 2026 (p/kWh, p/day;
 # 0% VAT on electricity, 5% on gas).

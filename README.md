@@ -4,7 +4,7 @@ The analysis behind PolicyEngine's post on what the energy price cap for 1 Janua
 
 ## Status
 
-Ofgem announces the cap for January to March 2027 on 25 November 2026 ([Ofgem's notice of the October cap](https://www.ofgem.gov.uk/publications/changes-energy-price-cap-between-1-october-and-31-december-2026)). Until then, the January rates are Cornwall Insight's final forecast of 18 November 2026 ([press release](https://www.cornwall-insight.com/press-releases/energy-bills-set-for-steep-rise-in-january/)): a typical dual-fuel Direct Debit bill of £2,166 a year, against Ofgem's current cap of £1,723 ([rates](https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges)).
+Ofgem announces the cap for January to March 2027 on 25 November 2026 ([Ofgem's notice of the October cap](https://www.ofgem.gov.uk/publications/changes-energy-price-cap-between-1-october-and-31-december-2026)). The January rates here are Cornwall Insight's final forecast of 18 November 2026 ([press release](https://www.cornwall-insight.com/press-releases/energy-bills-set-for-steep-rise-in-january/)): a typical dual-fuel Direct Debit bill of £2,166 a year, against Ofgem's current cap of £1,723 ([rates](https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges)).
 
 ## What it does
 
@@ -40,13 +40,12 @@ uv run python check_floor.py   # optional: survey households per cell (stdout on
 
 The dataset is in the private Hugging Face dataset `policyengine/populace-uk-private`, so the download needs a token with read access. `MICROCOSM_DATASET` points the scripts at a file elsewhere. A national run takes about a minute and several gigabytes of memory.
 
-## Updating for Ofgem's announcement
+## Rerunning with other rates
 
-When Ofgem publishes the January to March 2027 cap:
+The [post](https://policyengine.org/uk/research/uk-energy-price-cap-january-2027-forecast) stands on its own; PolicyEngine will cover Ofgem's announced cap in a separate post. To rerun these figures on other rates, such as Ofgem's:
 
 1. In `run_cap.py`, replace `JAN_FORECAST_BILL` with Ofgem's typical annual bill for each fuel (GB average, Direct Debit, at 2,500 kWh electricity and 9,500 kWh gas) and `JAN_FORECAST_UNIT` with its unit rates. The script backs the standing charges out of those two; or set them from Ofgem's rates directly.
-2. Rerun `run_cap.py` and `check_floor.py`.
-3. Update the post's tables, charts and key results from `results/results.json`.
+2. Rerun `run_cap.py` and `check_floor.py`; the figures are in `results/results.json`.
 
 ## Limits
 
